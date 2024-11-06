@@ -338,12 +338,14 @@ fn start_game(engine: &mut Engine, game_state: &mut GameState) {
         tree_top.translation = Vec2::new(-600.0 + i as f32 * 200.0, 450.0); // Adjust `y` position as needed
         tree_top.scale = 0.3;
         tree_top.layer = 0.5;
+        tree_top.collision = true;
     
         // Add trees along the bottom edge
         let tree_bottom = engine.add_sprite(format!("tree_bottom{}", i),   "tree.png");
         tree_bottom.translation = Vec2::new(-600.0 + i as f32 * 200.0, -450.0); // Adjust `y` position as needed
         tree_bottom.scale = 0.3;
         tree_bottom.layer = 0.5;
+        tree_bottom.collision = true;
     }
     
 
