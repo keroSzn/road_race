@@ -24,7 +24,7 @@
 1. Ensure that Rust is installed on your machine. If not, download it from [rust-lang.org](https://www.rust-lang.org/).
 2. Clone the repository:
     ```bash
-    git clone https://github.com/keroSzn/road_race.git
+    git clone https://github.com/keroSzn/road_race
     cd road_race
     ```
 3. Build and run the game using Cargo:
