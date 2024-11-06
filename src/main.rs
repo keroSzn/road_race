@@ -1,4 +1,4 @@
-use rusty_engine::prelude::*;
+use rusty_engine::{game, prelude::*};
 use rand::prelude::*;
 
 
@@ -178,6 +178,7 @@ fn game_logic(engine: &mut Engine, game_state: &mut GameState) {
 
             // Clear 'Game Over' text
             engine.texts.remove("game_over");
+            engine.texts.remove("game_message");
 
             // Restart background music
             engine.audio_manager.play_music(MusicPreset::WhimsicalPopsicle, 0.2);
@@ -270,8 +271,11 @@ fn game_logic(engine: &mut Engine, game_state: &mut GameState) {
     }
     if game_state.health_amount == 0{
         game_state.lost = true;
-        let game_over = engine.add_text("game_over", "GAME OVER!\nPress R to restart the game\nPress Q to quit the game" );
+        let game_over = engine.add_text("game_over", "GAME OVER!" );
         game_over.font_size = 90.0;
+        let game_message = engine.add_text("game_message", "Press R to restart the game\nPress Q to quit the game");
+        game_message.font_size = 50.0;
+        game_message.translation = Vec2::new(0.0, -100.0);
         engine.audio_manager.stop_music();
         engine.audio_manager.play_sfx(SfxPreset::Jingle3, 0.5);
     }
