@@ -1,15 +1,39 @@
-# Road Race
+# Road Race Game
 
-Welcome to **Road Race**, a high-speed racing game built with Rust. The game challenges players to maneuver through a bustling road, dodge obstacles, and reach the highest score possible. It's a great demonstration of Rust's power and efficiency in handling game mechanics and performance-critical code.
+"Road Race" is an arcade racing game developed using Rust and the Rusty Engine game framework. In this game, players control their cars to avoid obstacles and collect power-ups to gain advantages. The game features a dynamic background with trees along the top and bottom edges of the screen, enhancing the visual appeal.
 
-## 🚀 Features
+## Features
 
-- **Smooth Controls**: Responsive controls for an enjoyable racing experience.
-- **High Performance**: Built using Rust, offering efficient memory management and speed.
-- **Random Obstacles**: Obstacles appear randomly, keeping each race unique and challenging.
-- **Scoring System**: Track your score to see how far you can go without crashing!
+- **Two-Player Mode:** Both players can race simultaneously, each controlling their own car.
+- **Car Color Selection:** Players can choose their car color before starting the game.
+- **Obstacles and Power-Ups:** Players dodge obstacles and can collect speed boosts for temporary speed increase.
+- **Health System:** Each player has a limited amount of health, which decreases upon collisions with obstacles.
+- **Background Animations:** Includes tree assets along the screen edges and moving road lines to simulate driving.
 
-## Updates
-- I will update the game by adding new things by using rusty engine.
+## Controls
+
+- **Player 1:** Move up/down with `W`/`S` keys.
+- **Player 2:** Move up/down with `Arrow Up`/`Arrow Down` keys.
+- **Game Menu:** 
+  - Press `Enter` to start the game.
+  - Press `C` to open the car color selection menu.
+  - Press `Q` to quit the game.
+
+## Installation
+
+1. Ensure that Rust is installed on your machine. If not, download it from [rust-lang.org](https://www.rust-lang.org/).
+2. Clone the repository:
+    ```bash
+    git clone https://github.com/keroSzn/road_race.git
+    cd road_race
+    ```
+3. Build and run the game using Cargo:
+    ```bash
+    cargo run
+    ```
+
+## License
+
+This project is open-source and available under the MIT License.
 
 Thanks to Nathan Stocks :)
