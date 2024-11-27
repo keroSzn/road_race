@@ -1,4 +1,4 @@
-use rusty_engine::{game, prelude::*};
+use rusty_engine::prelude::*;
 use rand::prelude::*;
 
 
@@ -48,10 +48,8 @@ fn main() {
         SpritePreset::RacingConeStraight,
         SpritePreset::RacingCarRed,
         SpritePreset::RollingBlockSmall,
-        SpritePreset::RollingBallBlue,
         SpritePreset::RollingBallRed,
-        SpritePreset::RollingBlockNarrow,
-        SpritePreset::RollingBlockSquare,
+       
         
        
         
@@ -281,6 +279,7 @@ fn game_logic(engine: &mut Engine, game_state: &mut GameState) {
     }
 }
 fn color_selection(engine: &mut Engine, game_state: &mut GameState) {
+    let _ = game_state;
     let color_selection_message = engine.add_text("color_selection", "Player 1: Press 1 for Black, 2 for Blue, 3 for Green, 4 for Yellow.\nPlayer 2: Press 5 for Black, 6 for Blue, 7 for Green, 8 for Yellow.");
     color_selection_message.translation = Vec2::new(0.0, 0.0);
     color_selection_message.font_size = 30.0;
@@ -360,10 +359,9 @@ fn start_game(engine: &mut Engine, game_state: &mut GameState) {
         SpritePreset::RacingConeStraight,
         SpritePreset::RacingCarRed,
         SpritePreset::RollingBlockSmall,
-        SpritePreset::RollingBallBlue,
         SpritePreset::RollingBallRed,
-        SpritePreset::RollingBlockNarrow,
-        SpritePreset::RollingBlockSquare,
+        
+        
 
 
     ];
